@@ -1,7 +1,7 @@
 name: first-workflow # github action에 처음 워크 플로우
 on: [push] # push 이벤트 발생시
 
-job:
+jobs:
   shell-cmd-job: # 이름 지어줌
     runs-on: ubuntu-latest # 작업을 우분투 최신버전에서 돌림
     steps:
