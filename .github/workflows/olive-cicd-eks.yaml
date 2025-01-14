@@ -1,11 +1,13 @@
 name: istory ci/cd dev pipeline
-permissions: 
+
+permissions:
   contents: read
-  security-events: write
+  security-events: write  # CodeQL 결과를 업로드하기 위한 권한
   actions: read
+
 on:
-  push: 
-    branches: ["devlop"]
+  push:
+    branches: [ "develop"]
 jobs:
   verify_pipeline:
     environment: runner
@@ -38,3 +40,4 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    
